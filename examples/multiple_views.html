@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>test multiple views</title>
+  </head>
+  <script type="text/javascript" src="prix_collection.js"></script>
+  <body>
+    <script type="text/javascript">
+        prix.send_event([
+            {
+                type: "view",
+                merchant: "abcdefgh",
+                product: "product123",
+                channel: "web",
+                price: "9.99",
+            },
+            {
+                type: "view",
+                merchant: "abcdefgh",
+                product: "product456",
+                channel: "web",
+                price: "10.99",
+            },
+            {
+                type: "view",
+                merchant: "abcdefgh",
+                product: "product789",
+                channel: "web",
+                price: "11.99",
+            }
+        ]);
+    </script>
+  </body>
+</html>

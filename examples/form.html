@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Collection API Test</title>
+  </head>
+  <script type="text/javascript" src="prix_collection.js"></script>
+  <body>
+    <form action="" id="collectionForm" method="post">
+        <p>
+            <label for="id_type">Type</label>
+            <select name="type" id="id_type">
+                <option value="sale">sale</option>
+                <option value="query">query</option>
+            </select>
+        </p>
+        <p>
+            <label for="id_merchant">Merchant</label>
+            <input type="text" name="merchant" id="id_merchant" value="abcdefgh" />
+        </p>
+        <p>
+            <label for="id_product">Product</label>
+            <input type="text" name="product" id="id_product" value="product123" />
+        </p>
+        <p>
+            <label for="id_channel">Channel</label>
+            <input type="text" name="channel" id="id_channel" value="web" />
+        </p>
+        <p>
+            <label for="id_price">Price</label>
+            <input type="number" name="price" id="id_price" value="9.99"/>
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+
+    <pre id="id_result">
+
+    </pre>
+
+    <script type="text/javascript">
+        var resultContainer = document.getElementById('id_result');
+        var collectionForm = document.getElementById('collectionForm');
+        collectionForm.onsubmit = function () {
+            data = {
+                type: this.type.value,
+                merchant: this.merchant.value,
+                product: this.product.value,
+                channel: this.channel.value,
+                price: this.price.value,
+            }
+            prix.send_event(data);
+            return false;
+        }
+    </script>
+  </body>
+</html>
