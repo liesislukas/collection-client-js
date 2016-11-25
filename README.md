@@ -18,3 +18,5 @@ Usage
     });
 </script>
 ```
+
+Test it interactively on JSFiddle: https://jsfiddle.net/b11c/sjyhhy5z/
