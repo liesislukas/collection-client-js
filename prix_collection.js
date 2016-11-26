@@ -7,7 +7,7 @@ var prix = {
                     console.log(r.responseText);
                 }
             };
-            r.open("POST", "https://collection.api.prix.ai:8080/v1/events", true);
+            r.open("POST", "https://collection.api.prix.ai/v1/events", true);
             r.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             r.send(JSON.stringify(element));
         });
@@ -29,4 +29,4 @@ var prix = {
             }
         });
     }
-}
+};
