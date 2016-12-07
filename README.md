@@ -7,7 +7,7 @@ Usage
 
 ```javascript
 
-<script type="text/javascript" src="https://cdn.prix.ai/prix_collection.js"></script>
+<script type="text/javascript" src="https://cdn.prix.ai/prix-collection.js"></script>
 <script type="text/javascript">
     prix.send_event({
         type: "sale",
